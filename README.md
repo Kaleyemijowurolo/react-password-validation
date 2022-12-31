@@ -4,22 +4,26 @@ This component receives password and confirm password, then runs them against th
 
 ## Installation
 
-Run `npm i react-password-checker`
+Run `npm i react-password-validation`
+
+    or
+
+Run `yarn add react-password-validation`
 
 Use:
 
 ```
-    import PasswordValidationChecker from 'react-password-checker'
+import PasswordValidationChecker from 'react-password-checker'
 
 const PasswordChecker = () => (
      <PasswordValidationChecker
-        password={password}
-        show={showPasswordCheckList}
-        confirmPassword={cpassword}
-        onChange={(value) => {
-          setIsPasswordValid(value);
-          if (value === true) setShowPasswordCheckList(false);
-        }}
+        password={"password"}
+        show={true}
+        confirmPassword={"password"}
+        onChange={(value) => console.log(value)
+        rules={"number, specialCharacter, length, lowercase, uppercase "}
+        minLength={10}
+        maxLength={15}
      />)
 ```
 
